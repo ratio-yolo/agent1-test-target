@@ -1,0 +1,10 @@
+# Canary no-op workflow — exercises workflows:write scope.
+# Bootstrapped to prevent reviewer escalation on "new workflow file" rule.
+name: Canary No-Op
+on: {}
+jobs:
+  noop:
+    if: false
+    runs-on: ubuntu-latest
+    steps:
+      - run: 'true'
