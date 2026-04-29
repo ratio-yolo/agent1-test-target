@@ -1,12 +1,11 @@
 # Canary no-op workflow — exercises workflows:write scope.
-# Last canary touch: 2026-04-27
-# Workflow run: https://github.com/ratio-yolo/agent1/actions/runs/24985921400
+# Last canary touch: 2026-04-29
+# Workflow run: https://github.com/ratio-yolo/agent1/actions/runs/25099727750
 name: Canary No-Op
 on:
   workflow_dispatch:
 jobs:
   noop:
-    if: false
     runs-on: ubuntu-latest
     steps:
-      - run: 'true'
+      - run: echo canary verified
