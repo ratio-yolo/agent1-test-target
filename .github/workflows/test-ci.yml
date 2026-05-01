@@ -1,0 +1,11 @@
+name: Test CI
+on:
+  pull_request:
+jobs:
+  intentional-failure:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "This CI is intentionally failing to exercise Phase 2 wait_for_ci.py / build_ci_feedback.py."
+          echo "Spec: docs/superpowers/specs/2026-04-30-builder-push-only-and-stateless-ci-design.md §7.2"
+          exit 1
